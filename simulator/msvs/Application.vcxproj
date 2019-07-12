@@ -18,10 +18,13 @@
     <ClCompile Include="..\main.cpp"/>
     <ClCompile Include="..\..\gui\src\common\FrontendApplication.cpp"/>
     <ClCompile Include="..\..\generated\gui_generated\src\common\FrontendApplicationBase.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1Presenter.cpp"/>
-    <ClCompile Include="..\..\gui\src\screen1_screen\Screen1View.cpp"/>
-    <ClCompile Include="..\..\generated\gui_generated\src\screen1_screen\Screen1ViewBase.cpp"/>
     <ClCompile Include="..\..\gui\src\model\Model.cpp"/>
+    <ClCompile Include="..\..\gui\src\clockscreen_screen\clockScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\clockscreen_screen\clockScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\clockscreen_screen\clockScreenViewBase.cpp"/>
+    <ClCompile Include="..\..\gui\src\settingscreen_screen\settingScreenPresenter.cpp"/>
+    <ClCompile Include="..\..\gui\src\settingscreen_screen\settingScreenView.cpp"/>
+    <ClCompile Include="..\..\generated\gui_generated\src\settingscreen_screen\settingScreenViewBase.cpp"/>
   </ItemGroup>
   <ItemGroup>
     <None Include="..\..\assets\texts\texts.xlsx"/>
@@ -165,12 +168,16 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1Presenter.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp"/>
-    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\screen1_screen\Screen1ViewBase.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\clockscreen_screen\clockScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\clockscreen_screen\clockScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\clockscreen_screen\clockScreenViewBase.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\settingscreen_screen\settingScreenPresenter.hpp"/>
+    <ClInclude Include="..\..\gui\include\gui\settingscreen_screen\settingScreenView.hpp"/>
+    <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\settingscreen_screen\settingScreenViewBase.hpp"/>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="..\touchgfx.rc"/>

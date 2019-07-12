@@ -21,3 +21,10 @@ Functions get added to the Screen1View.hpp
 Functions implemented in Screen1View.cpp with NO VIRTUAL! And dont forget thats its C++!(class name::)
 
 Remember to add wildcard ranges or it shows '?'
+
+
+## 2. GUI without hardware integration
+### Following the TouchGFX Getting Started tutorials
+#### Tutorial 3 -> Step 1
+
+Changed gui to match the tutorial example

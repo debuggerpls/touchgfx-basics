@@ -8,11 +8,16 @@
 #include <common/Partition.hpp>
 #include <mvp/MVPHeap.hpp>
 #include <touchgfx/transitions/NoTransition.hpp>
+#include <touchgfx/transitions/CoverTransition.hpp>
+#include <touchgfx/transitions/SlideTransition.hpp>
+
 #include <gui/common/FrontendApplication.hpp>
 #include <gui/model/Model.hpp>
 
-#include <gui/screen1_screen/Screen1View.hpp>
-#include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <gui/settingscreen_screen/settingScreenView.hpp>
+#include <gui/settingscreen_screen/settingScreenPresenter.hpp>
+#include <gui/clockscreen_screen/clockScreenView.hpp>
+#include <gui/clockscreen_screen/clockScreenPresenter.hpp>
 
 
 /**
@@ -35,8 +40,9 @@ public:
      * A list of all view types. Must end with meta::Nil.
      * @note All view types used in the application MUST be added to this list!
      */
-    typedef meta::TypeList< Screen1View,
-            meta::Nil
+    typedef meta::TypeList< settingScreenView,
+            meta::TypeList< clockScreenView,
+            meta::Nil >
             > GeneratedViewTypes;
 
     /**
@@ -48,8 +54,9 @@ public:
      * A list of all presenter types. Must end with meta::Nil.
      * @note All presenter types used in the application MUST be added to this list!
      */
-    typedef meta::TypeList< Screen1Presenter,
-            meta::Nil
+    typedef meta::TypeList< settingScreenPresenter,
+            meta::TypeList< clockScreenPresenter,
+            meta::Nil >
             > GeneratedPresenterTypes;
 
     /**
@@ -62,7 +69,9 @@ public:
      * @note All transition types used in the application MUST be added to this list!
      */
     typedef meta::TypeList< NoTransition,
-            meta::Nil
+            meta::TypeList< CoverTransition<NORTH>,
+            meta::TypeList< SlideTransition<SOUTH>,
+            meta::Nil > >
             > GeneratedTransitionTypes;
 
     /**
@@ -72,7 +81,7 @@ public:
 
     virtual void gotoStartScreen(FrontendApplication& app)
     {
-        app.gotoScreen1ScreenNoTransition();
+        app.gotosettingScreenScreenNoTransition();
     }
 protected:
     FrontendHeapBase(AbstractPartition& presenters, AbstractPartition& views, AbstractPartition& transitions, FrontendApplication& app)

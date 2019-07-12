@@ -18,6 +18,7 @@ KEEP extern const touchgfx::GlyphNode glyphs_verdana_60_4bpp[] FONT_LOCATION_FLA
     {  4850,  55,  31,  45,  45,   4,  38, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {  5570,  56,  32,  46,  45,   3,  38, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
     {  6306,  57,  32,  46,  45,   3,  38, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
-    {  7042,  63,  26,  45,  45,   4,  33, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0}
+    {  7042,  58,   8,  33,  33,  10,  27, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0},
+    {  7174,  63,  26,  45,  45,   4,  33, 255,   0, touchgfx::GLYPH_DATA_FORMAT_A4 | 0}
 };
 

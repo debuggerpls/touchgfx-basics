@@ -688,6 +688,16 @@
           <GroupName>gui</GroupName>
           <Files>
             <File>
+              <FileName>clockScreenPresenter.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../gui/src/clockscreen_screen/clockscreenpresenter.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>clockScreenView.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../gui/src/clockscreen_screen/clockscreenview.cpp</FilePath>
+            </File>
+            <File>
               <FileName>FrontendApplication.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../../gui/src/common/frontendapplication.cpp</FilePath>
@@ -698,14 +708,14 @@
               <FilePath>../../gui/src/model/model.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen1Presenter.cpp</FileName>
+              <FileName>settingScreenPresenter.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../../gui/src/screen1_screen/screen1presenter.cpp</FilePath>
+              <FilePath>../../gui/src/settingscreen_screen/settingscreenpresenter.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen1View.cpp</FileName>
+              <FileName>settingScreenView.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../../gui/src/screen1_screen/screen1view.cpp</FilePath>
+              <FilePath>../../gui/src/settingscreen_screen/settingscreenview.cpp</FilePath>
             </File>
           </Files>
         </Group>
@@ -723,6 +733,16 @@
               <FilePath>../../generated/images/src/bitmapdatabase.cpp</FilePath>
             </File>
             <File>
+              <FileName>blue_buttons_round_edge_icon_button.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_icon_button.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>blue_buttons_round_edge_icon_button_pressed.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_icon_button_pressed.cpp</FilePath>
+            </File>
+            <File>
               <FileName>blue_buttons_round_edge_small.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
@@ -738,9 +758,19 @@
               <FilePath>../../generated/images/src/__designer/blue_icons_down_arrow_48.cpp</FilePath>
             </File>
             <File>
+              <FileName>blue_icons_settings_48.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../generated/images/src/__designer/blue_icons_settings_48.cpp</FilePath>
+            </File>
+            <File>
               <FileName>blue_icons_up_arrow_48.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../../generated/images/src/__designer/blue_icons_up_arrow_48.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>clockScreenViewBase.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>../../generated/gui_generated/src/clockscreen_screen/clockscreenviewbase.cpp</FilePath>
             </File>
             <File>
               <FileName>Font_verdana_10_4bpp.cpp</FileName>
@@ -788,9 +818,9 @@
               <FilePath>../../generated/texts/src/languagegb.cpp</FilePath>
             </File>
             <File>
-              <FileName>Screen1ViewBase.cpp</FileName>
+              <FileName>settingScreenViewBase.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>../../generated/gui_generated/src/screen1_screen/screen1viewbase.cpp</FilePath>
+              <FilePath>../../generated/gui_generated/src/settingscreen_screen/settingscreenviewbase.cpp</FilePath>
             </File>
             <File>
               <FileName>Table_verdana_10_4bpp.cpp</FileName>
