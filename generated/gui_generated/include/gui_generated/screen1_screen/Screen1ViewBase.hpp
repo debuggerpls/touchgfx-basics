@@ -7,6 +7,9 @@
 #include <gui/common/FrontendApplication.hpp>
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
+#include <touchgfx/widgets/Box.hpp>
+#include <touchgfx/widgets/ButtonWithIcon.hpp>
+#include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
 {
@@ -20,6 +23,15 @@ protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
     }
+
+    /*
+     * Member Declarations
+     */
+    touchgfx::Box boxBackground;
+    touchgfx::ButtonWithIcon buttonUp;
+    touchgfx::ButtonWithIcon buttonDown;
+    touchgfx::Box boxCounter;
+    touchgfx::TextAreaWithOneWildcard textCounter;
 
 private:
 

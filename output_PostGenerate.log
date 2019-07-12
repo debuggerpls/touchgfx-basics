@@ -29,6 +29,26 @@
   <FilePath>../../generated/images/src/bitmapdatabase.cpp</FilePath>
 </File>
 <File>
+  <FileName>blue_buttons_round_edge_small.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_buttons_round_edge_small_pressed.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_small_pressed.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_icons_down_arrow_48.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../../generated/images/src/__designer/blue_icons_down_arrow_48.cpp</FilePath>
+</File>
+<File>
+  <FileName>blue_icons_up_arrow_48.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../../generated/images/src/__designer/blue_icons_up_arrow_48.cpp</FilePath>
+</File>
+<File>
   <FileName>Font_verdana_10_4bpp.cpp</FileName>
   <FileType>8</FileType>
   <FilePath>../../generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>
@@ -39,9 +59,9 @@
   <FilePath>../../generated/fonts/src/font_verdana_20_4bpp.cpp</FilePath>
 </File>
 <File>
-  <FileName>Font_verdana_40_4bpp.cpp</FileName>
+  <FileName>Font_verdana_60_4bpp.cpp</FileName>
   <FileType>8</FileType>
-  <FilePath>../../generated/fonts/src/font_verdana_40_4bpp.cpp</FilePath>
+  <FilePath>../../generated/fonts/src/font_verdana_60_4bpp.cpp</FilePath>
 </File>
 <File>
   <FileName>FontGetters.cpp</FileName>
@@ -64,9 +84,14 @@
   <FilePath>../../generated/fonts/src/kerning_verdana_20_4bpp.cpp</FilePath>
 </File>
 <File>
-  <FileName>Kerning_verdana_40_4bpp.cpp</FileName>
+  <FileName>Kerning_verdana_60_4bpp.cpp</FileName>
   <FileType>8</FileType>
-  <FilePath>../../generated/fonts/src/kerning_verdana_40_4bpp.cpp</FilePath>
+  <FilePath>../../generated/fonts/src/kerning_verdana_60_4bpp.cpp</FilePath>
+</File>
+<File>
+  <FileName>LanguageGb.cpp</FileName>
+  <FileType>8</FileType>
+  <FilePath>../../generated/texts/src/languagegb.cpp</FilePath>
 </File>
 <File>
   <FileName>Screen1ViewBase.cpp</FileName>
@@ -84,9 +109,9 @@
   <FilePath>../../generated/fonts/src/table_verdana_20_4bpp.cpp</FilePath>
 </File>
 <File>
-  <FileName>Table_verdana_40_4bpp.cpp</FileName>
+  <FileName>Table_verdana_60_4bpp.cpp</FileName>
   <FileType>8</FileType>
-  <FilePath>../../generated/fonts/src/table_verdana_40_4bpp.cpp</FilePath>
+  <FilePath>../../generated/fonts/src/table_verdana_60_4bpp.cpp</FilePath>
 </File>
 <File>
   <FileName>Texts.cpp</FileName>

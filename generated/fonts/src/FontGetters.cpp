@@ -30,15 +30,15 @@ touchgfx::InternalFlashFont& getFont_verdana_20_4bpp()
     return verdana_20_4bpp;
 }
 
-// verdana_40_4bpp
-extern const touchgfx::GlyphNode glyphs_verdana_40_4bpp[];
-extern const uint8_t unicodes_verdana_40_4bpp[];
-extern const touchgfx::KerningNode kerning_verdana_40_4bpp[];
-touchgfx::InternalFlashFont& getFont_verdana_40_4bpp();
+// verdana_60_4bpp
+extern const touchgfx::GlyphNode glyphs_verdana_60_4bpp[];
+extern const uint8_t unicodes_verdana_60_4bpp[];
+extern const touchgfx::KerningNode kerning_verdana_60_4bpp[];
+touchgfx::InternalFlashFont& getFont_verdana_60_4bpp();
 
-touchgfx::InternalFlashFont& getFont_verdana_40_4bpp()
+touchgfx::InternalFlashFont& getFont_verdana_60_4bpp()
 {
-    static touchgfx::InternalFlashFont verdana_40_4bpp(glyphs_verdana_40_4bpp, 1, 40, 0, 4, 0, 0, unicodes_verdana_40_4bpp, kerning_verdana_40_4bpp, 63, 0);
-    return verdana_40_4bpp;
+    static touchgfx::InternalFlashFont verdana_60_4bpp(glyphs_verdana_60_4bpp, 2, 60, 1, 4, 0, 0, unicodes_verdana_60_4bpp, kerning_verdana_60_4bpp, 63, 0);
+    return verdana_60_4bpp;
 }
 

@@ -2,7 +2,122 @@
   "Application": {
     "Screens": [
       {
-        "Components": [],
+        "Components": [
+          {
+            "Color": {
+              "Red": 26,
+              "Green": 23,
+              "Blue": 54
+            },
+            "Alpha": 255,
+            "Name": "boxBackground",
+            "X": 0,
+            "Y": 0,
+            "Width": 800,
+            "Height": 480,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\blue_icons_up_arrow_48.png",
+            "IconReleased": "__designer\\blue_icons_up_arrow_48.png",
+            "IconX": 62,
+            "IconY": 17,
+            "IconHeight": 26,
+            "IconWidth": 46,
+            "ButtonStyle": "Style4",
+            "IconStyle": "Icon68",
+            "Name": "buttonUp",
+            "X": 145,
+            "Y": 138,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithIcon",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Pressed": "__designer\\blue_buttons_round_edge_small_pressed.png",
+            "Released": "__designer\\blue_buttons_round_edge_small.png",
+            "Alpha": 255,
+            "IconPressed": "__designer\\blue_icons_down_arrow_48.png",
+            "IconReleased": "__designer\\blue_icons_down_arrow_48.png",
+            "IconX": 62,
+            "IconY": 17,
+            "IconHeight": 26,
+            "IconWidth": 46,
+            "ButtonStyle": "Style4",
+            "IconStyle": "Icon14",
+            "Name": "buttonDown",
+            "X": 145,
+            "Y": 231,
+            "Width": 170,
+            "Height": 60,
+            "Type": "ButtonWithIcon",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "Color": {
+              "Red": 15,
+              "Green": 15,
+              "Blue": 15
+            },
+            "Alpha": 255,
+            "Name": "boxCounter",
+            "X": 439,
+            "Y": 138,
+            "Width": 169,
+            "Height": 153,
+            "Type": "Box",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          },
+          {
+            "TextId": "SingleUseId1",
+            "TextRotation": "0",
+            "Color": {
+              "Red": 255,
+              "Green": 255,
+              "Blue": 255
+            },
+            "Alpha": 255,
+            "AutoSize": true,
+            "LineSpacing": 0,
+            "Wildcard1": {
+              "TextId": "SingleUseId2",
+              "UseBuffer": false,
+              "BufferSize": 0
+            },
+            "Name": "textCounter",
+            "X": 504,
+            "Y": 178,
+            "Width": 38,
+            "Height": 73,
+            "Type": "TextArea",
+            "Visible": true,
+            "Draggable": false,
+            "Clickable": false,
+            "Fadeable": false,
+            "Moveable": false
+          }
+        ],
         "Interactions": [],
         "Name": "Screen1",
         "OverrideDefaultBufferSize": false,
@@ -10,6 +125,16 @@
       }
     ],
     "CustomContainerDefinitions": [],
+    "TextEntries": [
+      {
+        "TextEntryId": "SingleUseId1",
+        "IsResource": false
+      },
+      {
+        "TextEntryId": "SingleUseId2",
+        "IsResource": false
+      }
+    ],
     "Name": "touchgfxbasics",
     "Resolution": {
       "Width": 800,

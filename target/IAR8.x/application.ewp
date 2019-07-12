@@ -1066,7 +1066,7 @@
           <name>$PROJ_DIR$\..\..\generated\fonts\src\Font_verdana_20_4bpp.cpp</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\generated\fonts\src\Font_verdana_40_4bpp.cpp</name>
+          <name>$PROJ_DIR$\..\..\generated\fonts\src\Font_verdana_60_4bpp.cpp</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\generated\fonts\src\FontGetters.cpp</name>
@@ -1078,7 +1078,7 @@
           <name>$PROJ_DIR$\..\..\generated\fonts\src\Kerning_verdana_20_4bpp.cpp</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\generated\fonts\src\Kerning_verdana_40_4bpp.cpp</name>
+          <name>$PROJ_DIR$\..\..\generated\fonts\src\Kerning_verdana_60_4bpp.cpp</name>
         </file>
         <file>
           <name>$PROJ_DIR$\..\..\generated\fonts\src\Table_verdana_10_4bpp.cpp</name>
@@ -1087,7 +1087,7 @@
           <name>$PROJ_DIR$\..\..\generated\fonts\src\Table_verdana_20_4bpp.cpp</name>
         </file>
         <file>
-          <name>$PROJ_DIR$\..\..\generated\fonts\src\Table_verdana_40_4bpp.cpp</name>
+          <name>$PROJ_DIR$\..\..\generated\fonts\src\Table_verdana_60_4bpp.cpp</name>
         </file>
       </group>
       <group>
@@ -1107,12 +1107,30 @@
       </group>
       <group>
         <name>images</name>
+        <group>
+          <name>__designer</name>
+          <file>
+            <name>$PROJ_DIR$\..\..\generated\images\src\__designer\blue_buttons_round_edge_small.cpp</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\..\..\generated\images\src\__designer\blue_buttons_round_edge_small_pressed.cpp</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\..\..\generated\images\src\__designer\blue_icons_down_arrow_48.cpp</name>
+          </file>
+          <file>
+            <name>$PROJ_DIR$\..\..\generated\images\src\__designer\blue_icons_up_arrow_48.cpp</name>
+          </file>
+        </group>
         <file>
           <name>$PROJ_DIR$\..\..\generated\images\src\BitmapDatabase.cpp</name>
         </file>
       </group>
       <group>
         <name>texts</name>
+        <file>
+          <name>$PROJ_DIR$\..\..\generated\texts\src\LanguageGb.cpp</name>
+        </file>
         <file>
           <name>$PROJ_DIR$\..\..\generated\texts\src\Texts.cpp</name>
         </file>
