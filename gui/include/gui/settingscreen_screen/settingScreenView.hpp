@@ -11,7 +11,15 @@ public:
     virtual ~settingScreenView() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void buttonDownMinuteClicked();
+    virtual void buttonUpMinuteClicked();
+    virtual void buttonDownHourClicked();
+    virtual void buttonUpHourClicked();
+    virtual void buttonSetMinuteClicked();
+    virtual void buttonSetHourClicked();
 protected:
+	int16_t hour;
+	int16_t minute;
 };
 
 #endif // SETTINGSCREEN_VIEW_HPP

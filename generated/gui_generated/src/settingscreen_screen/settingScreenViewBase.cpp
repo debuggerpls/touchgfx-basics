@@ -15,10 +15,12 @@ settingScreenViewBase::settingScreenViewBase() :
     buttonUpHour.setXY(101, 108);
     buttonUpHour.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_48_ID), Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_48_ID));
     buttonUpHour.setIconXY(7, 17);
+    buttonUpHour.setAction(buttonCallback);
 
     buttonDownHour.setXY(101, 184);
     buttonDownHour.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID), Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID));
     buttonDownHour.setIconXY(7, 17);
+    buttonDownHour.setAction(buttonCallback);
 
     boxCounterHour.setPosition(187, 108, 144, 132);
     boxCounterHour.setColor(touchgfx::Color::getColorFrom24BitRGB(15, 15, 15));
@@ -34,6 +36,7 @@ settingScreenViewBase::settingScreenViewBase() :
     buttonUpMinute.setXY(621, 108);
     buttonUpMinute.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_48_ID), Bitmap(BITMAP_BLUE_ICONS_UP_ARROW_48_ID));
     buttonUpMinute.setIconXY(7, 17);
+    buttonUpMinute.setAction(buttonCallback);
 
     boxCounterMinute.setPosition(446, 108, 144, 132);
     boxCounterMinute.setColor(touchgfx::Color::getColorFrom24BitRGB(15, 15, 15));
@@ -41,6 +44,7 @@ settingScreenViewBase::settingScreenViewBase() :
     buttonDownMinute.setXY(621, 184);
     buttonDownMinute.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_ICON_BUTTON_PRESSED_ID), Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID), Bitmap(BITMAP_BLUE_ICONS_DOWN_ARROW_48_ID));
     buttonDownMinute.setIconXY(7, 17);
+    buttonDownMinute.setAction(buttonCallback);
 
     textMinute.setXY(480, 132);
     textMinute.setColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
@@ -55,12 +59,14 @@ settingScreenViewBase::settingScreenViewBase() :
     buttonSetHour.setLabelText(TypedText(T_SINGLEUSEID5));
     buttonSetHour.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonSetHour.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonSetHour.setAction(buttonCallback);
 
     buttonSetMinute.setXY(433, 258);
     buttonSetMinute.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
     buttonSetMinute.setLabelText(TypedText(T_SINGLEUSEID6));
     buttonSetMinute.setLabelColor(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
     buttonSetMinute.setLabelColorPressed(touchgfx::Color::getColorFrom24BitRGB(255, 255, 255));
+    buttonSetMinute.setAction(buttonCallback);
 
     buttonSwitchScreen.setXY(315, 362);
     buttonSwitchScreen.setBitmaps(Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_ID), Bitmap(BITMAP_BLUE_BUTTONS_ROUND_EDGE_SMALL_PRESSED_ID));
@@ -92,27 +98,45 @@ void settingScreenViewBase::buttonCallbackHandler(const touchgfx::AbstractButton
 {
     if (&src == &buttonUpHour)
     {
-
+        //btnUpHrClickInt
+        //When buttonUpHour clicked call virtual function
+        //Call buttonUpHourClicked
+        buttonUpHourClicked();
     }
     else if (&src == &buttonDownHour)
     {
-
+        //btnDwnHrClickInt
+        //When buttonDownHour clicked call virtual function
+        //Call buttonDownHourClicked
+        buttonDownHourClicked();
     }
     else if (&src == &buttonUpMinute)
     {
-
+        //btnUpMinClickInt
+        //When buttonUpMinute clicked call virtual function
+        //Call buttonUpMinuteClicked
+        buttonUpMinuteClicked();
     }
     else if (&src == &buttonDownMinute)
     {
-
+        //btnDwnMinClickInt
+        //When buttonDownMinute clicked call virtual function
+        //Call buttonDownMinuteClicked
+        buttonDownMinuteClicked();
     }
     else if (&src == &buttonSetHour)
     {
-
+        //setHourClicked
+        //When buttonSetHour clicked call virtual function
+        //Call buttonSetHourClicked
+        buttonSetHourClicked();
     }
     else if (&src == &buttonSetMinute)
     {
-
+        //setMinClicked
+        //When buttonSetMinute clicked call virtual function
+        //Call buttonSetMinuteClicked
+        buttonSetMinuteClicked();
     }
     else if (&src == &buttonSwitchScreen)
     {

@@ -20,6 +20,39 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void buttonDownMinuteClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
+    virtual void buttonUpMinuteClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
+    virtual void buttonDownHourClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
+    virtual void buttonUpHourClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
+    virtual void buttonSetMinuteClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
+    virtual void buttonSetHourClicked()
+    {
+        // Override and implement this function in settingScreenView
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());

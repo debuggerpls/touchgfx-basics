@@ -26,9 +26,9 @@ clockScreenViewBase::clockScreenViewBase() :
 
     circleClock.setPosition(300, 140, 200, 200);
     circleClock.setCenter(100, 100);
-    circleClock.setRadius(92);
+    circleClock.setRadius(91);
     circleClock.setLineWidth(6);
-    circleClock.setArc(0, 360);
+    circleClock.setArc(0, 180);
     circleClock.setCapPrecision(90);
     circleClockPainter.setColor(touchgfx::Color::getColorFrom24BitRGB(0, 0, 0));
     circleClock.setPainter(circleClockPainter);

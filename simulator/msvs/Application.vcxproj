@@ -168,7 +168,6 @@
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendApplicationBase.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\common\FrontendHeap.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp"/>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp"/>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\Model.hpp"/>
     <ClInclude Include="..\..\gui\include\gui\model\ModelListener.hpp"/>

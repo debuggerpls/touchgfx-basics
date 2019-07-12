@@ -139,9 +139,6 @@
     <Filter Include="Source Files\gui\common">
       <UniqueIdentifier>430FBCDC-0AA8-4538-8D34-A02E02B3CC1E</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\gui\screen1_screen">
-      <UniqueIdentifier>6A7CF62E-74AF-4CEE-BAE9-D70621E3642C</UniqueIdentifier>
-    </Filter>
     <Filter Include="Header Files\generated\gui_generated\common">
       <UniqueIdentifier>F821525D-84A6-40CA-B613-D24730771B4C</UniqueIdentifier>
     </Filter>
@@ -642,9 +639,6 @@
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\FrontendHeapBase.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\gui\include\gui\screen1_screen\Screen1View.hpp">
-      <Filter>Header Files\gui\screen1_screen</Filter>
     </ClInclude>
     <ClInclude Include="..\..\generated\gui_generated\include\gui_generated\common\SimConstants.hpp">
       <Filter>Header Files\generated\gui_generated\common</Filter>
