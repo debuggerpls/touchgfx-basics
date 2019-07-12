@@ -102,8 +102,8 @@
             "LineSpacing": 0,
             "Wildcard1": {
               "TextId": "SingleUseId2",
-              "UseBuffer": false,
-              "BufferSize": 0
+              "UseBuffer": true,
+              "BufferSize": 10
             },
             "Name": "textCounter",
             "X": 504,
@@ -118,7 +118,32 @@
             "Moveable": false
           }
         ],
-        "Interactions": [],
+        "Interactions": [
+          {
+            "InteractionName": "InteractionButtonDown",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonDown",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonDownPressed",
+              "Type": "ActionCustom"
+            }
+          },
+          {
+            "InteractionName": "InteractionButtonUp",
+            "HasCompletedTrigger": false,
+            "Trigger": {
+              "TriggerComponent": "buttonUp",
+              "Type": "TriggerClicked"
+            },
+            "Action": {
+              "FunctionName": "buttonUpPressed",
+              "Type": "ActionCustom"
+            }
+          }
+        ],
         "Name": "Screen1",
         "OverrideDefaultBufferSize": false,
         "CanvasBufferSize": 0

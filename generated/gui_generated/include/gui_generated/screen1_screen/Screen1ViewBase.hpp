@@ -19,6 +19,19 @@ public:
 
     virtual void setupScreen();
 
+    /*
+     * Custom Action Handlers
+     */
+    virtual void buttonDownPressed()
+    {
+        // Override and implement this function in Screen1View
+    }
+
+    virtual void buttonUpPressed()
+    {
+        // Override and implement this function in Screen1View
+    }
+
 protected:
     FrontendApplication& application() {
         return *static_cast<FrontendApplication*>(Application::getInstance());
@@ -33,7 +46,23 @@ protected:
     touchgfx::Box boxCounter;
     touchgfx::TextAreaWithOneWildcard textCounter;
 
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTCOUNTER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textCounterBuffer[TEXTCOUNTER_SIZE];
+
 private:
+
+    /*
+     * Callback Handler Declarations
+     */
+    void buttonCallbackHandler(const touchgfx::AbstractButton& src);
+
+    /*
+     * Callback Declarations
+     */
+    touchgfx::Callback<Screen1ViewBase, const touchgfx::AbstractButton&> buttonCallback;
 
 };
 

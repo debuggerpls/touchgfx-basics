@@ -11,7 +11,10 @@ public:
     virtual ~Screen1View() {}
     virtual void setupScreen();
     virtual void tearDownScreen();
+    virtual void buttonDownPressed();
+    virtual void buttonUpPressed();
 protected:
+	int counter;
 };
 
 #endif // SCREEN1_VIEW_HPP
