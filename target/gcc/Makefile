@@ -72,18 +72,18 @@ asset_texts_output := $(asset_root_path)/texts
 #include application specific configuration
 -include config/gcc/app.mk
 
-os_source_files := $(os_path)/FreeRTOS7.6.0/Source/croutine.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/list.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/queue.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/tasks.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/timers.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/portable/MemMang/heap_2.c \
-                   $(os_path)/FreeRTOS7.6.0/Source/portable/GCC/ARM_CM4F/port.c
+os_source_files := $(os_path)/FreeRTOS10.0.1/Source/croutine.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/list.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/queue.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/tasks.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/timers.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/portable/MemMang/heap_4.c \
+                   $(os_path)/FreeRTOS10.0.1/Source/portable/GCC/ARM_CM4F/port.c
 
-os_include_paths := $(os_path)/FreeRTOS7.6.0/Source/include \
-		    $(os_path)/FreeRTOS7.6.0/Source/portable/GCC/ARM_CM4F
+os_include_paths := $(os_path)/FreeRTOS10.0.1/Source/include \
+		    $(os_path)/FreeRTOS10.0.1/Source/portable/GCC/ARM_CM4F
 
-os_wrapper := $(os_path)/FreeRTOS7.6.0/OSWrappers.cpp
+os_wrapper := $(os_path)/FreeRTOS10.0.1/OSWrappers.cpp
 
 ### END OF USER SECTION. THE FOLLOWING SHOULD NOT BE MODIFIED ###
 
@@ -168,8 +168,8 @@ all_components := $(components) \
 	$(asset_texts_output)
 
 #keep framework include and source out of this mess! :)
-include_paths := $(library_includes) $(foreach comp, $(all_components), $(comp)/include) $(framework_includes) $(source_bsp_paths)
-source_paths = $(foreach comp, $(all_components), $(comp)/src)
+include_paths := $(library_includes) $(foreach comp, $(all_components), $(comp)/include) $(framework_includes) $(source_bsp_paths) updateTextFiles
+source_paths = $(foreach comp, $(all_components), $(comp)/src) updateTextFiles
 
 # Finds files that matches the specified pattern. The directory list
 # is searched recursively. It is safe to invoke this function with an
@@ -257,10 +257,10 @@ board_include_paths := \
 c_compiler_options += -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
 cpp_compiler_options +=  -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
 
-include_paths += platform/os $(board_include_paths) $(os_include_paths) updateTextFiles
+include_paths += platform/os $(board_include_paths) $(os_include_paths) 
 
 
-c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(makefile_path_relative)/isr.c $(board_c_files) updateTextFiles/updateTask.c
+c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(makefile_path_relative)/isr.c $(board_c_files) 
 source_files += $(os_wrapper) target/gcc/gccstubs.cpp target/main.cpp \
                 $(board_cpp_files) \
                 $(bsp_path)/source/BoardConfiguration.cpp \

@@ -91,13 +91,13 @@ int main(void)
     //static uint8_t canvasBuffer[CANVAS_BUFFER_SIZE];
     //CanvasWidgetRenderer::setupBuffer(canvasBuffer, CANVAS_BUFFER_SIZE);
 
-    xTaskCreate(updateTask, (TASKCREATE_NAME_TYPE)"updateTask",
+    xTaskCreate(updateTask, "updateTask",
                 150,
                 NULL,
                 ( tskIDLE_PRIORITY + 2 ),
                 NULL);
 
-    xTaskCreate(GUITask, (TASKCREATE_NAME_TYPE)"GUITask",
+    xTaskCreate(GUITask, "GUITask",
                 configGUI_TASK_STK_SIZE,
                 NULL,
                 configGUI_TASK_PRIORITY,

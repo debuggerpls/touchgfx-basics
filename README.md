@@ -78,3 +78,24 @@ This part will move the updateTask to seperate .c/.h files. Makefile will be edi
 #### target/gcc/Makefile
 * include_paths : updateTextFiles (add it, line 260)
 * c_source_files : updateTextFiles/updateTask.c (add it, line 263)
+
+* (2nd option for Makefile, DO NOT USE BOTH!) include_paths : updateTextFiles (add to line 171)
+* source_paths : updateTextFiles (add to line 172)
+
+## 5. Update FreeRTOS to 10.0.1
+FreeRTOS 7.6.0 that was used in the designer generated code was upgraded to 10.0.1. FreeRTOS source and FreeRTOSConfig.h file is from CubeMX generated project (used with TouchGFX, standard FreeRTOS sounce should work too, but I think Config file has to be adapted)
+
+* Copy FreeRTOS souce to target/os/FreeRTOS10.0.1/ directory. Copy OSWrappers.cpp file from FreeRTOS7.6.0 directory.
+
+* Copy and replace FreeRTOSConfig.h file from CubeMX project to platform/os/FreeRTOSConfig.h.
+
+#### FreeRTOSConfig.h
+* #define configSUPPORT_STATIC_ALLOCATION 0 (otherwise you need to add additional functions)
+* Change all #define INCLUDE_* to 1 (it was like that in 7.6.0)
+* add #ifndef USE_OS_SYSTICK part from old FreeRTOSConfig.h file, so that TickHandler gets configured.
+
+#### main.cpp
+* remove (TASKCREATE_NAME_TYPE) from xTaskCreate.
+
+#### Makefile
+* change everything that includes FreeRTOS7.6.0 to FreeRTOS10.0.1. Optionaly you can swap heap_2.c to heap_4.c

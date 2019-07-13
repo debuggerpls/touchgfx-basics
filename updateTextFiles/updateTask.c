@@ -12,7 +12,7 @@ void updateTask(void *p)
 
     for(;;)
     {
-        vTaskDelay(500);
+        vTaskDelay(1000);
         xSemaphoreGive(updateSem);
     }
 }
