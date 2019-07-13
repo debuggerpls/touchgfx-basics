@@ -1,6 +1,6 @@
 "# touchgfx-basics"
 
-# This is 2. from rtosComponents. Scroll down!
+# This is 3. from rtosComponents. Scroll down!
 
 STM32Cube v1.15, FreeRTOS, 16bit color depth
 
@@ -44,3 +44,16 @@ Impelement a task in main that sends update notifications to Model. This builds 
 * include FreeRTOS.h and queue.h.
 * declare the updateQueue as extern (extern xQueueHandle updateQueue).
 * Comment out previous tick code. Define item to save the queue item, even though we dont use it. Check if we can receive an item, by using the xQueueGenericReceive function in non-blocking way. If received, update the counter and call modelListener->updateCounter(counter).
+
+## 3. Updating text from seperate task in main (semaphore)
+Just like part 2. but using semaphores.
+
+#### main.cpp
+* include "semphr.h"
+* define semaphore handle updateSem. This will be used to communicate with Model.
+* edit updateTask. remove old code for queues. create updateSem as semaphore binary. in for() loop give the semaphore updateSem every 2s.
+
+#### Model.cpp
+* remove queue.h include. add semphr.h include.
+* declare updateSem as extern semaphore handle.
+* edit tick(). remove queue code. update counter when semaphore can be taken. Take in non-blocking way!

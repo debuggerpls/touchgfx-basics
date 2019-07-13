@@ -42,8 +42,9 @@ using namespace touchgfx;
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
+#include "semphr.h"
 
-xQueueHandle updateQueue = 0;
+xSemaphoreHandle updateSem = NULL;
 
 /**
  * Define the FreeRTOS task priorities and stack sizes
@@ -61,15 +62,12 @@ static void GUITask(void* params)
 
 static void updateTask(void *p)
 {
-    portBASE_TYPE item = 0;
-    // create queue
-    // size of 1, item size portBasetype, type 0
-    updateQueue = xQueueGenericCreate(1, 1, 0);
+    updateSem = xSemaphoreCreateBinary();
 
     for(;;)
     {
-        vTaskDelay(500);
-        xQueueGenericSend(updateQueue, &item, 0, queueSEND_TO_BACK);
+        vTaskDelay(2000);
+        xSemaphoreGive(updateSem);
     }
 }
 
