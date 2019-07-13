@@ -254,8 +254,8 @@ board_include_paths := \
 	$(bsp_path)/source/vendor/STM32469I-Discovery
 
 # Compiler options
-c_compiler_options += -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
-cpp_compiler_options +=  -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
+c_compiler_options += -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT -DUSE_FULL_LL_DRIVER
+cpp_compiler_options +=  -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT -DUSE_FULL_LL_DRIVER
 
 include_paths += platform/os $(board_include_paths) $(os_include_paths) 
 

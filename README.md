@@ -1,6 +1,6 @@
 "# touchgfx-basics"
 
-# This is 3. from rtosComponents. Scroll down!
+# This is 6. from rtosComponents. Scroll down!
 
 STM32Cube v1.15, FreeRTOS, 16bit color depth
 
@@ -99,3 +99,15 @@ FreeRTOS 7.6.0 that was used in the designer generated code was upgraded to 10.0
 
 #### Makefile
 * change everything that includes FreeRTOS7.6.0 to FreeRTOS10.0.1. Optionaly you can swap heap_2.c to heap_4.c
+
+## 6. Update STM32CubeF4 to v1.24
+Updated the CubeF4 files from v1.15 that comes from TouchGFX designer to  v1.24. Not all files were changed, but most of those that I found in v1.24. It was basically copying the files. Cube LL drivers can now be used.
+
+## ##system_stm32f4xx.
+* After copying I still needed to add #ifdef with error "Please select data_in_extSRAM ..". It does not make any sense, but somehow it compiled afterwards..
+
+#### stm32f4xx_hal_conf.h
+* added LSE_STARTUP_TIMEOUT defines. Without them it doesnt compile.
+
+#### Makefile
+* Add -DUSE_FULL_LL_DRIVER to c_compiler_options & cpp_compiler_options to enable LL drivers (i guess, without them structs dont work).
