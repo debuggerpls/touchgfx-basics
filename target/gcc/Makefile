@@ -257,10 +257,10 @@ board_include_paths := \
 c_compiler_options += -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
 cpp_compiler_options +=  -DST -DSTM32F469xx -DUSE_OS_SYSTICK -DUSE_FLOATING_POINT
 
-include_paths += platform/os $(board_include_paths) $(os_include_paths)
+include_paths += platform/os $(board_include_paths) $(os_include_paths) updateTextFiles
 
 
-c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(makefile_path_relative)/isr.c $(board_c_files)
+c_source_files := $(call find, $(source_paths),*.c) $(os_source_files) $(makefile_path_relative)/isr.c $(board_c_files) updateTextFiles/updateTask.c
 source_files += $(os_wrapper) target/gcc/gccstubs.cpp target/main.cpp \
                 $(board_cpp_files) \
                 $(bsp_path)/source/BoardConfiguration.cpp \

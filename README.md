@@ -57,3 +57,24 @@ Just like part 2. but using semaphores.
 * remove queue.h include. add semphr.h include.
 * declare updateSem as extern semaphore handle.
 * edit tick(). remove queue code. update counter when semaphore can be taken. Take in non-blocking way!
+
+
+## 4. Update text from otside of main.cpp (add new files)
+This part will move the updateTask to seperate .c/.h files. Makefile will be editted to compile and include new files.
+
+#### 'projectPath'/updateTextFiles/updateTask.h
+* create new folder in project path(highest path). Name it updateTextFiles. Create updateTask.h header file. Declare updateTask() so it can be used later in main.cpp.
+
+#### 'projectPath'/updateTextFiles/updateTask.c
+* include updateTask.h
+* include FreeRTOS.h, task.h and semphr.h
+* move the definition of updateSem and updateTask() to this file.
+
+#### main.cpp
+* remove semphr.h include
+* include updateTask.h as extern "C"
+* (done in previous step) move updateSem and updateTask() to updateTask.c file.
+
+#### target/gcc/Makefile
+* include_paths : updateTextFiles (add it, line 260)
+* c_source_files : updateTextFiles/updateTask.c (add it, line 263)

@@ -42,9 +42,12 @@ using namespace touchgfx;
 #include "FreeRTOS.h"
 #include "task.h"
 #include "queue.h"
-#include "semphr.h"
 
-xSemaphoreHandle updateSem = NULL;
+extern "C"
+{
+    #include "updateTask.h"
+}
+
 
 /**
  * Define the FreeRTOS task priorities and stack sizes
@@ -58,17 +61,6 @@ xSemaphoreHandle updateSem = NULL;
 static void GUITask(void* params)
 {
     touchgfx::HAL::getInstance()->taskEntry();
-}
-
-static void updateTask(void *p)
-{
-    updateSem = xSemaphoreCreateBinary();
-
-    for(;;)
-    {
-        vTaskDelay(2000);
-        xSemaphoreGive(updateSem);
-    }
 }
 
 int main(void)
