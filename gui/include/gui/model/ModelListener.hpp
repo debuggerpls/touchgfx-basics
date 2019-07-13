@@ -27,6 +27,8 @@ public:
     {
         model = m;
     }
+
+    virtual void updateCounter(int c);
 protected:
     Model* model;
 };

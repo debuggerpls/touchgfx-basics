@@ -15,3 +15,13 @@ void Screen1Presenter::deactivate()
 {
 
 }
+
+void Screen1Presenter::updateCounter(int c)
+{
+	view.updateCounter(model->getCounter());
+}
+
+int Screen1Presenter::getCounter()
+{
+	return model->getCounter();
+}

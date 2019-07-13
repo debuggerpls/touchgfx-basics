@@ -27,6 +27,9 @@ public:
 
     virtual ~Screen1Presenter() {};
 
+    void updateCounter(int c);
+    int getCounter();
+
 private:
     Screen1Presenter();
 

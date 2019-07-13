@@ -30,6 +30,8 @@ public:
     {
         modelListener = listener;
     }
+    // for presenter
+    int getCounter() { return counter; }
 
     /**
      * This function will be called automatically every frame. Can be used to e.g. sample hardware
@@ -38,6 +40,8 @@ public:
      */
     void tick();
 protected:
+    int counter;
+    int tickCounter;
     /**
      * Pointer to the currently active presenter.
      */

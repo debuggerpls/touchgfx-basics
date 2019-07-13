@@ -723,26 +723,6 @@
               <FilePath>../../generated/images/src/bitmapdatabase.cpp</FilePath>
             </File>
             <File>
-              <FileName>blue_buttons_round_edge_small.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_small.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_buttons_round_edge_small_pressed.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../../generated/images/src/__designer/blue_buttons_round_edge_small_pressed.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_icons_down_arrow_48.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../../generated/images/src/__designer/blue_icons_down_arrow_48.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>blue_icons_up_arrow_48.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>../../generated/images/src/__designer/blue_icons_up_arrow_48.cpp</FilePath>
-            </File>
-            <File>
               <FileName>Font_verdana_10_4bpp.cpp</FileName>
               <FileType>8</FileType>
               <FilePath>../../generated/fonts/src/font_verdana_10_4bpp.cpp</FilePath>

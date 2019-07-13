@@ -8,7 +8,6 @@
 #include <mvp/View.hpp>
 #include <gui/screen1_screen/Screen1Presenter.hpp>
 #include <touchgfx/widgets/Box.hpp>
-#include <touchgfx/widgets/ButtonWithIcon.hpp>
 #include <touchgfx/widgets/TextAreaWithWildcard.hpp>
 
 class Screen1ViewBase : public touchgfx::View<Screen1Presenter>
@@ -28,10 +27,14 @@ protected:
      * Member Declarations
      */
     touchgfx::Box boxBackground;
-    touchgfx::ButtonWithIcon buttonUp;
-    touchgfx::ButtonWithIcon buttonDown;
     touchgfx::Box boxCounter;
     touchgfx::TextAreaWithOneWildcard textCounter;
+
+    /*
+     * Wildcard Buffers
+     */
+    static const uint16_t TEXTCOUNTER_SIZE = 10;
+    touchgfx::Unicode::UnicodeChar textCounterBuffer[TEXTCOUNTER_SIZE];
 
 private:
 
